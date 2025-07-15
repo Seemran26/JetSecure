@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>DotSky</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/filght.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script defer="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <style>
+            .treading-title {
+                font-family: 'Cambria', cursive;
+                font-size: 50px;
+                text-align: center;
+
+            }
+    
+            .pitch-item-1 {
+                background-image: url("./Images/delhi1.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                
+            }
+    
+            .pitch-item-2 {
+                background-image: url("./Images/mumbai.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+    
+            .pitch-item-3 {
+                background-image: url("./Images/kolkata.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+    
+            .pitch-item-4 {
+                background-image: url("./Images/Hyderabad.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+    
+            .pitch-item-5 {
+                background-image: url("./Images/Goa.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .pitch-item-6 {
+                background-image: url("./Images/Leh-Ladakh.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+    
+            .pitch-item-7 {
+                background-image: url("./Images/Coorg.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .pitch-item-8 {
+                background-image: url("./Images/Kerala.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+    
+    
+            .pitch-country-1 {
+                background-image: url("./Images/dubai.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .pitch-country-2 {
+                background-image: url("./Images/USA.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .pitch-country-3 {
+                background-image: url("./Images/france.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .pitch-country-4 {
+                background-image: url("./Images/mexico.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .pitch-country-5 {
+                background-image: url("./Images/india.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .pitch-country-6 {
+                background-image: url("./Images/spain.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .pitch-country-7 {
+                background-image: url("./Images/poland.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .pitch-country-8 {
+                background-image: url("./Images/italy.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+    
+            
+            .pitch-overlay {
+                background-color: rgba(0, 0, 0, .2);
+                backdrop-filter: blur(5px);
+                height: 100%;
+                color: white;
+                padding: 20px;
+                transform: translateY(100%);
+                transition: all 0.3s ease-out;
+            }
+    
+            .pitch-heading {
+                text-align: center;
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+    
+            .pitch-info {
+                font-size: 15px;
+            }
+    
+            .pitch-item,
+            .pitch-img {
+                border-radius: 15px;
+                overflow: hidden;
+                height: 150px;
+                width: 400px;
+            }
+    
+            .pitch-item:hover .pitch-overlay,
+            .pitch-img:hover .pitch-overlay {
+                transform: translateY(0);
+            }
+    
+            .tourism {
+                height: 150px;
+                width: 90w;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+                gap: 20px;
+                flex-direction: row;
+            }
+    
+            .name1 {
+                font-family: 'Cambria', cursive;
+                font-size: 40px;
+                color: black;
+                text-align: center;
+                padding: 0px;
+                margin: 0px;
+                height: auto;
+            }
+    
+            .name2 {
+                font-family: 'Cambria', cursive;
+                font-size: 20px;
+                color: black;
+                text-align: center;
+                padding: 0px;
+                margin: 0px;
+                height: auto;
+                margin-bottom: 5px;
+            }
+    
+            .submit-btn:hover{
+                color: aliceblue;
+                background-color: rgb(167, 44, 44);
+            }
+    
+            .btnsub:hover{
+                color: green;
+            }
+    
+    
+    
+            .tab-titles{
+        display: flex;  
+    }
+    
+    .tab-links{
+        margin-right: 50px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .tab-links::after{
+        content: '';
+        width: 0;
+        height: 3px;
+        background-color: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s;
+    }
+    .tab-links.active-links::after{
+    width: 50%;
+    
+    }
+    .tab-links:hover::after{
+        width: 100%;
+    }
+    
+    .tab-contents ul li{
+        list-style: none;
+        margin: 10px 0;
+    }
+    
+    .tab-contents ul li span{
+        color: #d43d6d;
+        font-size: 14px;
+    }
+    
+    .tab-contents{
+        display: none;
+    }
+    
+    .tab-contents.active-tab{
+        display: block;
+    }
+    
+    .ticket{
+                background-color: rgb(255, 255, 255);
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+                gap: 80px;
+                flex-direction: row;
+                text-align: left;
+                margin-left: 0;
+    }
+    
+    
+    
+        </style>
+
+</head>
+
+<body class="sb-nav-fixed">
+    <!-- Sidebar-->
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"
+            style="margin-left: 20px;"><i class="fas fa-bars"></i></button>
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html">DotSky</a>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <!--
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                -->
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <div id="signupbtn" class="mx-2">
+                <a class=" btn btn-outline-light icon-link icon-link-hover" data-bs-toggle="modal"
+                    data-bs-target="#signupModal" href="#loginModal">
+                    <i class="bi-person-circle" style="margin-right: 4px; "></i>Sign in
+                </a>
+            </div>
+        </ul>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login into Flight Account</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="./php/login.php" method="post">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" aria-describedby="emailHelp" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                        </div>
+                        <div class="form-group">
+                            <div class="small"><a href="#signupModal" data-bs-toggle="modal"
+                                    data-bs-target="#signupModal">Need an account? Sign up!</a></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Get an Flight Account</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="./php/signin.php" method="post">
+                        <div class="form-group">
+                            <label for="username">Name</label>
+                            <input type="name" class="form-control" aria-describedby="emailHelp" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" aria-describedby="emailHelp" name="email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="conpassword">Confirm Password</label>
+                            <input type="password" class="form-control" name="conpassword">
+                        </div>
+                        <div class="form-group">
+                            <div class="small"><a href="#loginModal" data-bs-toggle="modal"
+                                    data-bs-target="#loginModal">Have an account? Go to login</a></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" value="Register">Create Account</button>
+                    </form>
+                 </div>
+                <div class="modal-footer">
+                    <form action="./php/veiw.php" method="post">
+                        <button type="submit" class="btn btn-secondary">View Data</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar content-->
+    <div id="layoutSidenav">
+    <!-- Side bar -->
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <hr class="border border-dark border-2 opacity-100" style="margin-top: 0; margin-bottom: 0;">
+                        <a class="nav-link" href="#signupModal" data-bs-toggle="modal" data-bs-target="#signupModal">
+                            <div class="sb-nav-link-icon"><i class="bi-person-circle"></i></div>
+                            Sign in
+                        </a>
+                        <hr class="border border-dark border-2 opacity-100" style="margin-top: 0; margin-bottom: 0;">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon "><i class="fas fa-plane"></i></div>
+                            Flights
+                        </a>
+                        <a class="nav-link collapsed" href="./about  stays/stays.html" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-hotel"></i></div>
+                            Stays
+                        </a>
+                        <a class="nav-link collapsed" href="./car rental/car.html" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-car"></i></div>
+                            Cars Rental
+                        </a>
+                         <hr class="border border-dark border-2 opacity-100" style="margin-top: 0; margin-bottom: 0;">
+                        <a class="nav-link collapsed" href="./Explore/explore.html" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            Explore
+                        </a>
+                        <hr class="border border-dark border-2 opacity-100" style="margin-top: 0; margin-bottom: 0;">
+                        <a class="nav-link collapsed" href="trips.html" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-heart"></i></div>
+                            Trips
+                        </a>
+                        </a>
+                        <hr class="border border-dark border-2 opacity-100" style="margin-top: 0; margin-bottom: 0;">
+                        <a class="nav-link collapsed" href="./about  stays/about.html" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-inr"></i></div>
+                            About Us
+                        </a>
+
+
+            </nav>
+        </div>
+
+        <!-- Carousel Modal -->
+        <div>
+                <!-- Main Booking -->
+                <div id="layoutSidenav_content">
+                    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./Images/air.jpg" class="d-block w-100" alt="..." style="filter: blur(2px); height: 900px;">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div id="booking" class="section">
+                                        <div class="section-center">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="booking-form" style="padding-left: 40px; padding-right: 40px; margin-top: 40px;">
+                                                        <form action="new_view.php" method="post">
+                                                            <div class="form-group">
+                                                                <h2 style="text-align: left; font-family:'Arial Black', 'Arial Bold', sans-serif">Where do you want to go?</h2>
+                                                                <br> 
+                                                                <div class="form-checkbox">
+                                                                    <label for="roundtrip">
+                                                                        <input type="radio" id="roundtrip" name="flight-type" value="roundtrip">
+                                                                        <span></span>Roundtrip
+                                                                    </label>
+                                                                    <label for="one-way">
+                                                                        <input type="radio" id="one-way" name="flight-type" value="one-way">
+                                                                        <span></span>One way
+                                                                    </label>
+                                                                    <label for="multi-city">
+                                                                        <input type="radio" id="multi-city" name="flight-type" value="multi-city">
+                                                                        <span></span>Multi-City
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <span class="form-label">Flying from</span>
+                                                                        <input class="form-control" type="text" name="fly-from" placeholder="City or airport" style="border-radius: 0px;">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <span class="form-label">Flying to</span>
+                                                                        <input class="form-control" type="text" name="fly-to" placeholder="City or airport" style="border-radius: 0px;">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <span class="form-label">Departing</span>
+                                                                        <input class="form-control" type="date" name="departing" required style="border-radius: 0px;">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <span class="form-label">Returning</span>
+                                                                        <input class="form-control" type="date" name="returning" required style="border-radius: 0px;">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <div class="form-group">
+                                                                        <span class="form-label">Adults (18+)</span>
+                                                                        <select class="form-control" name="adults" style="border-radius: 0px;">
+                                                                            <option>1</option>
+                                                                            <option>2</option>
+                                                                            <option>3</option>
+                                                                            <option>4</option>
+                                                                            <option>5</option>
+                                                                        </select>
+                                                                        <span class="select-arrow"></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <div class="form-group">
+                                                                        <span class="form-label">Children (0-17)</span>
+                                                                        <select class="form-control" name="children" style="border-radius: 0px;">
+                                                                            <option>0</option>
+                                                                            <option>1</option>
+                                                                            <option>2</option>
+                                                                            <option>4</option>
+                                                                            <option>5</option>
+                                                                        </select>
+                                                                        <span class="select-arrow"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <span class="form-label">Travel class</span>
+                                                                        <select class="form-control" name="travel-class" style="border-radius: 0px;">
+                                                                            <option>Economy class</option>
+                                                                            <option>Business class</option>
+                                                                            <option>First class</option>
+                                                                        </select>
+                                                                        <span class="select-arrow"></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-btn">
+                                                                        <button class="submit-btn" style="border-radius: 0px;">Show flights</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- International / Domestic -->
+                <div style="width: 70%; text-align: center; margin-left: 260px; margin-top: 100px;">
+                    <div>
+                        <p class="name1"> Popular flights near you</p>
+                        <p class="name2"> Find deals on domestic and international flights</p> 
+                    </div> 
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('international')">International</p>
+                        <p class="tab-links" onclick="opentab('domestic')">Domestic</p>
+                    </div>
+                <br>
+                <div class="tab-contents active-tab" id="international">
+                        <section class="tourism active">
+                            <!-- International 1 -->
+                            <div class="pitch-item-1 pitch-item" style="background-image: url('./Images/international1.jpg');">
+                            </div>
+                            <!-- International 2 -->
+                            <div class="pitch-item-2 pitch-item" style="background-image: url('./Images/international2.jpg');">
+                            </div>
+                            <!-- International 3 -->
+                            <div class="pitch-item-3 pitch-item" style="background-image: url('./Images/international3.jpg');">
+                            </div>
+                            <!-- International 4 -->
+                            <div class="pitch-item-4 pitch-item" style="background-image: url('./Images/international4.jpg');">
+                            </div>
+                        </section>  
+                        <section class="ticket">
+                            <!-- International 1 -->
+                            <div>
+                                <p style="margin-top: 0; width: 260px;">Mumbai to Bangkok <br>
+                                    Apr 10 - Apr 17 · Round trip</p>
+                            </div>
+                            <!-- International 2 -->
+                            <div>
+                                <p style="margin-top: 0; width: 260px;">Mumbai to Singapore <br>
+                                    Apr 12 - Apr 19 · Round trip</p>
+                            </div>
+                            <!-- International 3 -->
+                            <div>
+                                <p style="margin-top: 0; width: 260px;">Mumbai to Male City<br>
+                                    Apr 10 - Apr 17 · Round trip
+                                    </p>
+                            </div>
+                            <!-- International 4 -->
+                            <div>
+                                <p style="margin-right: 60px; width: 240px;">Mumbai to Dubai<br>
+                                    Apr 10 - Apr 17 · Round trip</p>
+                            </div>
+                        </section>  
+                </div>
+
+                <div class="tab-contents" id="domestic">
+                    <section class="tourism active">
+                        <!-- Domestic 1 -->
+                        <div class="pitch-item-1 pitch-item" style="background-image: url('./Images/domestic1.jpg');">
+                        </div>
+                        <!-- Domestic 2 -->
+                        <div class="pitch-item-2 pitch-item" style="background-image: url('./Images/domestic2.jpg');">
+                        </div>
+                        <!-- Domestic 3 -->
+                        <div class="pitch-item-3 pitch-item" style="background-image: url('./Images/domestic3.jpg');">
+                        </div>
+                        <!-- Domestic 4 -->
+                        <div class="pitch-item-4 pitch-item" style="background-image: url('./Images/domestic4.jpg');">
+                        </div>
+                    </section>  
+                    <section class="ticket">
+                        <!-- Domestic 1 -->
+                        <div>
+                            <p style="margin-top: 0; width: 260px;">Mumbai to Ahmedabad <br>
+                                Apr 11 - Apr 18 · Round trip</p>
+                        </div>
+                        <!-- Domestic 2 -->
+                        <div>
+                            <p style="margin-top: 0; width: 260px;">Mumbai to Dabolim <br>
+                                Apr 9 - Apr 16 · Round trip</p>
+                        </div>
+                        <!-- Domestic 3 -->
+                        <div>
+                            <p style="margin-top: 0; width: 260px;">Mumbai to Hyderabad <br>
+                                Apr 11 - Apr 18 · Round trip
+                                </p>
+                        </div>
+                        <!-- Domestic 4 -->
+                        <div>
+                            <p style="margin-right: 60px; width: 240px;">Mumbai to Bangalore <br>
+                                Apr 9 - Apr 16 · Round trip</p>
+                        </div>
+                    </section> 
+                </div>
+                    
+                </div>
+
+                <!-- What DotSky brings to the table. -->     
+                <div style="width: 70%; text-align: center; margin-left: 260px; margin-top: 40px;">
+                        <h2 class="pb-2 border-bottom">What DotSky brings to the table.</h2>
+                        <div class="row">
+                        <div class="feature col" style="border: 2px solid black; border-radius: 10px; margin: 10px; padding: 20px;">
+                            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                            <img src="./Images/what1.png">
+                            </div>
+                            <h4>Search for the best flight deals</h4>
+                            <p>Search for the best flight deals from 900+ travel sites. No need to search multiple websites, KAYAK allows you to compare all of them in one place.</p>
+                        </div>
+                        <div class="feature col" style="border: 2px solid black; border-radius: 10px; margin: 10px; padding: 20px;">
+                            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                            <img src="./Images/what2.png">
+                            </div>
+                            <h4>Book with flexibility</h4>
+                            <p>Easily find and filter flights that suit your different requirements, like no cancellation fees.</p>
+                        </div>
+                        <div class="feature col" style="border: 2px solid black; border-radius: 10px; margin: 10px; padding: 20px;">
+                            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                            <img src="./Images/what3.png">
+                            </div>
+                            <h4>Trusted and free</h4>
+                            <p>We are completely free to use - no hidden charges or fees.</p>
+                        </div>
+                        <div class="feature col" style="border: 2px solid black; border-radius: 10px; margin: 10px; padding: 20px;">
+                            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                            <img src="./Images/what4.png">
+                            </div>
+                            <h4>Easy to use trip planning tools</h4>
+                            <p>With useful tools like trip planner, flight tracker and bag measure, KAYAK is more than just a flight search site - it is your complete travel partner.</p>
+                        </div>
+                        </div>
+                        <br> <br> <br>
+                        
+
+                        <div style="border: 0.5px solid black; border-radius: 8px;">
+                            <ul>
+                            <li> 
+                                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none " href="#">
+                                <img src="./Images/earth.png" alt="">
+                                <div class="col-lg-8">
+                                    <h4 >Receive our newsletter.</h4>
+                                    <p>Sign up for email updates with travel recommendations and Private Deals.</p>
+                                    <form>
+                                        <div class="mb-2" style="width: 600px;"> 
+                                        <input type="email" class="form-control" placeholder="Enter your Email" required>
+                                        </div>
+                                        <button type="submit" class="btnsub" style="width: 62%; margin-left: 0; margin-right: 400px; border: 1px solid rgb(104, 103, 103); background-color: whitesmoke;">Let's do this</button>
+                                    </form>
+                                </div>
+                                </a>
+                            </li>
+                            </ul>
+                        </div>    
+                </div>
+            
+                <!-- Treading Cities -->
+                <div style="width: 70%; text-align: center; margin-left: 260px; margin-top: 40px;">
+                    <div>
+                        <p class="name1"> Treading Cities</p>
+                        <p class="name2"> The most searched cities on Flight</p> 
+                    </div> 
+                <br>
+                    <section class="tourism active" id="tourism">
+                        <!-- City 1 -->
+                        <div class="pitch-item-1 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;"> Delhi</div>
+                                <div class="pitch-info"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- City 2 -->
+                        <div class="pitch-item-2 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;">Mumbai</div>
+                                <div class="pitch-info"></div>
+                            </div>
+                        </div>
+                        <!-- City 3 -->
+                        <div class="pitch-item-3 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;">Kolkata</div>
+                                <div class="pitch-info"> </div>
+                            </div>
+                        </div>
+                        <!-- City 4 -->
+                        <div class="pitch-item-4 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;">Hyderabad</div>
+                                <div class="pitch-info"> </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="tourism active" id="tourism" style="height: 200px; margin-top: 0px;">
+                        <!-- City 1 -->
+                        <div class="pitch-item-5 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;"> Goa</div>
+                                <div class="pitch-info"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- City 2 -->
+                        <div class="pitch-item-6 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;">Leh Ladakh</div>
+                                <div class="pitch-info"></div>
+                            </div>
+                        </div>
+                        <!-- City 3 -->
+                        <div class="pitch-item-7 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;">Coorg</div>
+                                <div class="pitch-info"> </div>
+                            </div>
+                        </div>
+                        <!-- City 4 -->
+                        <div class="pitch-item-8 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;">Kerla</div>
+                                <div class="pitch-info"> </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Treading Countries -->
+                <div style="width: 70%; text-align: center; margin-left: 260px; margin-top: 40px;">
+                    <div>
+                        <p class="name1"> Treading Countries</p>
+                        <p class="name2"> The most searched cities on Flight</p>
+                    </div><br>
+                    <section class="tourism active" id="tourism">
+                        <!-- Country 1 -->
+                        <div class="pitch-country-1 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;"> Dubai</div>
+                                <div class="pitch-info"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- Country 2 -->
+                        <div class="pitch-country-2 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;">USA</div>
+                                <div class="pitch-info"></div>
+                            </div>
+                        </div>
+                        <!-- Country 3 -->
+                        <div class="pitch-country-3 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;">France</div>
+                                <div class="pitch-info"> </div>
+                            </div>
+                        </div>
+                        <!-- Country 4 -->
+                        <div class="pitch-country-4 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;">Mexico</div>
+                                <div class="pitch-info"> </div>
+                            </div>
+                        </div>
+                    </section>
+                    <br>
+                    <section class="tourism active" id="tourism">
+                        <!-- Country 5 -->
+                        <div class="pitch-country-5 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;"> India</div>
+                                <div class="pitch-info"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- Country 6 -->
+                        <div class="pitch-country-6 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;">Spain</div>
+                                <div class="pitch-info"></div>
+                            </div>
+                        </div>
+                        <!-- Country 7 -->
+                        <div class="pitch-country-7 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;">Poland</div>
+                                <div class="pitch-info"> </div>
+                            </div>
+                        </div>
+                        <!-- Country 8 -->
+                        <div class="pitch-country-8 pitch-item">
+                            <div class="pitch-overlay">
+                                <div class="pitch-heading" style="margin-top: 12px;">Italy</div>
+                                <div class="pitch-info"> </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+
+
+                </div><br><br>
+
+                <!-- Flight dropdown -->
+                <div class="container text-center" style="width: 70%; text-align: center; margin-left: 380px; margin-top: 40px;">
+                    <h2> Flight deals by destination</h2>
+                    <p> We search and compare billions of real-time prices on plane tickets so you can easily find the
+                        cheapest, quickest, and best flight deals for you.</p>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <div>
+                                <!-- New Delhi Col-->
+                                <select
+                                    style="width: 350px; height: 50px; text-align: center; border: none; border-bottom: 2px solid black;">
+                                    <option value="" disabled selected hidden>New Delhi</option>
+                                    <option value="1">Flights from Mumbai to New Delhi</option>
+                                    <option value="2">Flights from Bengaluru to New Delhi</option>
+                                    <option value="1">Flights from Kolkata to New Delhi</option>
+                                    <option value="2">Flights from Hydrabad to New Delhi</option>
+                                    <option value="1">Flights from Kochi to New Delhi</option>
+                                    <option value="2">Flights from Pune to New Delhi</option>
+                                    <option value="1">Flights from Vasco da Gama to New Delhi</option>
+                                    <option value="2">Flights from Chennai to New Delhi</option>
+                                </select>
+                                <!-- Mumbai Col-->
+                                <select
+                                    style="width: 350px; height: 50px; text-align: center; border: none; border-bottom: 2px solid black;">
+                                    <option value="" disabled selected hidden>Mumbai</option>
+                                    <option value="1">Flights from Mumbai to Mumbai</option>
+                                    <option value="2">Flights from Bengaluru to Mumbai</option>
+                                    <option value="1">Flights from Kolkata to Mumbai</option>
+                                    <option value="2">Flights from Hydrabad to Mumbai</option>
+                                    <option value="1">Flights from Kochi to Mumbai</option>
+                                    <option value="2">Flights from Pune to Mumbai</option>
+                                    <option value="1">Flights from Vasco da Gama to Mumbai</option>
+                                    <option value="2">Flights from Chennai to Mumbai</option>
+                                </select>
+                                <!-- Bengaluru Col-->
+                                <select
+                                    style="width: 350px; height: 50px; text-align: center; border: none; border-bottom: 2px solid black;">
+                                    <option value="" disabled selected hidden>Bengaluru</option>
+                                    <option value="1">Flights from Mumbai to Bengaluru</option>
+                                    <option value="2">Flights from Bengaluru to Bengaluru</option>
+                                    <option value="1">Flights from Kolkata to Bengaluru</option>
+                                    <option value="2">Flights from Hydrabad to Bengaluru</option>
+                                    <option value="1">Flights from Kochi to Bengaluru</option>
+                                    <option value="2">Flights from Pune to Bengaluru</option>
+                                    <option value="1">Flights from Vasco da Gama to Bengaluru</option>
+                                    <option value="2">Flights from Chennai to Bengaluru</option>
+                                </select>
+                                <!-- Dubai Col-->
+                                <select
+                                    style="width: 350px; height: 50px; text-align: center; border: none; border-bottom: 2px solid black;">
+                                    <option value="" disabled selected hidden>Dubai</option>
+                                    <option value="1">Flights from Mumbai to Dubai</option>
+                                    <option value="2">Flights from Bengaluru to Dubai</option>
+                                    <option value="1">Flights from Kolkata to Dubai</option>
+                                    <option value="2">Flights from Hydrabad to Dubai</option>
+                                    <option value="1">Flights from Kochi to Dubai</option>
+                                    <option value="2">Flights from Pune to Dubai</option>
+                                    <option value="1">Flights from Vasco da Gama to Dubai</option>
+                                    <option value="2">Flights from Chennai to Dubai</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <!-- Vasco da Gama Col-->
+                                <select
+                                    style="width: 350px; height: 50px; text-align: center; border: none; border-bottom: 2px solid black;">
+                                    <option value="" disabled selected hidden>Vasco da Gama</option>
+                                    <option value="1">Flights from Mumbai to Vasco da Gama</option>
+                                    <option value="2">Flights from Bengaluru to Vasco da Gama</option>
+                                    <option value="1">Flights from Kolkata to Vasco da Gama</option>
+                                    <option value="2">Flights from Hydrabad to Vasco da Gama</option>
+                                    <option value="1">Flights from Kochi to Vasco da Gama</option>
+                                    <option value="2">Flights from Pune to Vasco da Gama</option>
+                                    <option value="1">Flights from Vasco da Gama to Vasco da Gama</option>
+                                    <option value="2">Flights from Chennai to Vasco da Gama</option>
+                                </select>
+                                <!-- Kolkata Col-->
+                                <select
+                                    style="width: 350px; height: 50px; text-align: center; border: none; border-bottom: 2px solid black;">
+                                    <option value="" disabled selected hidden>Kolkata</option>
+                                    <option value="1">Flights from Mumbai to Kolkata</option>
+                                    <option value="2">Flights from Bengaluru to Kolkata</option>
+                                    <option value="1">Flights from Kolkata to Kolkata</option>
+                                    <option value="2">Flights from Hydrabad to Kolkata</option>
+                                    <option value="1">Flights from Kochi to Kolkata</option>
+                                    <option value="2">Flights from Pune to Kolkata</option>
+                                    <option value="1">Flights from Vasco da Gama to Kolkata</option>
+                                    <option value="2">Flights from Chennai to Kolkata</option>
+                                </select>
+                                <!-- Hyderabad Col-->
+                                <select
+                                    style="width: 350px; height: 50px; text-align: center; border: none; border-bottom: 2px solid black;">
+                                    <option value="" disabled selected hidden>Hyderabad</option>
+                                    <option value="1">Flights from Mumbai to Hyderabad</option>
+                                    <option value="2">Flights from Bengaluru to Hyderabad</option>
+                                    <option value="1">Flights from Kolkata to Hyderabad</option>
+                                    <option value="2">Flights from Hydrabad to Hyderabad</option>
+                                    <option value="1">Flights from Kochi to Hyderabad</option>
+                                    <option value="2">Flights from Pune to Hyderabad</option>
+                                    <option value="1">Flights from Vasco da Gama to Hyderabad</option>
+                                    <option value="2">Flights from Chennai to Hyderabad</option>
+                                </select>
+                                <!-- Ahmedabad Col-->
+                                <select
+                                    style="width: 350px; height: 50px; text-align: center; border: none; border-bottom: 2px solid black;">
+                                    <option value="" disabled selected hidden>Ahmedabad</option>
+                                    <option value="1">Flights from Mumbai to Ahmedabad</option>
+                                    <option value="2">Flights from Bengaluru to Ahmedabad</option>
+                                    <option value="1">Flights from Kolkata to Ahmedabad</option>
+                                    <option value="2">Flights from Hydrabad to Ahmedabad</option>
+                                    <option value="1">Flights from Kochi to Ahmedabad</option>
+                                    <option value="2">Flights from Pune to Ahmedabad</option>
+                                    <option value="1">Flights from Vasco da Gama to Ahmedabad</option>
+                                    <option value="2">Flights from Chennai to Ahmedabad</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <!-- London Col-->
+                                <select
+                                    style="width: 350px; height: 50px; text-align: center; border: none; border-bottom: 2px solid black;">
+                                    <option value="" disabled selected hidden>London</option>
+                                    <option value="1">Flights from Mumbai to London</option>
+                                    <option value="2">Flights from Bengaluru to London</option>
+                                    <option value="1">Flights from Kolkata to London</option>
+                                    <option value="2">Flights from Hydrabad to London</option>
+                                    <option value="1">Flights from Kochi to London</option>
+                                    <option value="2">Flights from Pune to London</option>
+                                    <option value="1">Flights from Vasco da Gama to London</option>
+                                    <option value="2">Flights from Chennai to London</option>
+                                </select>
+                                <!-- Pune Col-->
+                                <select
+                                    style="width: 350px; height: 50px; text-align: center; border: none; border-bottom: 2px solid black;">
+                                    <option value="" disabled selected hidden>Pune</option>
+                                    <option value="1">Flights from Mumbai to Pune</option>
+                                    <option value="2">Flights from Bengaluru to Pune</option>
+                                    <option value="1">Flights from Kolkata to Pune</option>
+                                    <option value="2">Flights from Hydrabad to Pune</option>
+                                    <option value="1">Flights from Kochi to Pune</option>
+                                    <option value="2">Flights from Pune to Pune</option>
+                                    <option value="1">Flights from Vasco da Gama to Pune</option>
+                                    <option value="2">Flights from Chennai to Pune</option>
+                                </select>
+                                <!-- Chennai Col-->
+                                <select
+                                    style="width: 350px; height: 50px; text-align: center; border: none; border-bottom: 2px solid black;">
+                                    <option value="" disabled selected hidden>Chennai</option>
+                                    <option value="1">Flights from Mumbai to Chennai</option>
+                                    <option value="2">Flights from Bengaluru to Chennai</option>
+                                    <option value="1">Flights from Kolkata to Chennai</option>
+                                    <option value="2">Flights from Hydrabad to Chennai</option>
+                                    <option value="1">Flights from Kochi to Chennai</option>
+                                    <option value="2">Flights from Pune to Chennai</option>
+                                    <option value="1">Flights from Vasco da Gama to Chennai</option>
+                                    <option value="2">Flights from Chennai to Chennai</option>
+                                </select>
+                                <!-- Bangkok Col-->
+                                <select
+                                    style="width: 350px; height: 50px; text-align: center; border: none; border-bottom: 2px solid black;">
+                                    <option value="" disabled selected hidden>Bangkok</option>
+                                    <option value="1">Flights from Mumbai to Bangkok</option>
+                                    <option value="2">Flights from Bengaluru to Bangkok</option>
+                                    <option value="1">Flights from Kolkata to Bangkok</option>
+                                    <option value="2">Flights from Hydrabad to Bangkok</option>
+                                    <option value="1">Flights from Kochi to Bangkok</option>
+                                    <option value="2">Flights from Pune to Bangkok</option>
+                                    <option value="1">Flights from Vasco da Gama to Bangkok</option>
+                                    <option value="2">Flights from Chennai to Bangkok</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question dropdown -->
+                <div class="container text-center" style="width: 70%; text-align: center; margin-left: 380px; margin-top: 40px;">
+                    <h2> How to find cheap flight deals with Flights</h2>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <div>
+                                <!-- Col 1-->
+                                <div class="dropdown-center">
+                                    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                        style="width: 520px; height: 50px; border-bottom: 2px solid black;">
+                                        How does momondo find such cheap airfare?
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" disabled
+                                                style="background-color:antiquewhite;">
+                                                Flight searches across hundreds of<br>
+                                                airlines and travel sites, from major booking sites to individual
+                                                company<br>
+                                                sites, to give you as many cheap airfare options as possible. When you<br>
+                                                conduct a single search on momondo, you can find and compare cheap
+                                                airline<br>
+                                                tickets like you’ve done hundreds of searches at once.<br><br>
+
+                                                Flight is completely free to use - with no hidden charges or fees - and
+                                                the<br>
+                                                prices you see are never affected by your searches, no matter how many
+                                                you<br>
+                                                make.<br><br>
+
+                                                We believe in an open world, where travelling and getting acquainted
+                                                across<br>
+                                                borders and cultures is available to us all, so we’re committed to
+                                                showing<br>
+                                                you the cheapest flights in our flight finder.</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Col 2-->
+                                <div class="dropdown-center">
+                                    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                        style="width: 520px; height: 50px; border-bottom: 2px solid black;">
+                                        How can Mix & Match save me money?
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" disabled
+                                                style="background-color:antiquewhite;">
+                                                Sometimes you can save money by combining flight tickets from different <br>
+                                                suppliers, and we call that Mix & Match. This means you can book your
+                                                outbound
+                                                <br>
+                                                flight with one supplier, and your return flight with another. <br>
+
+                                                If you can save money by combining tickets from different suppliers, we’ll
+                                                <br>
+                                                automatically include this option in your flight results and label it Mix &
+                                                <br>
+                                                Match. You’ll have to complete two separate booking flows after you select
+                                                this
+                                                <br>
+                                                deal on our site, but it’s worth it if you can save money over a traditional
+                                                <br>
+                                                round-trip with one supplier. It’s an advanced way of getting the cheapest
+                                                <br>
+                                                flights even if they’re offered by different suppliers..</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col">
+                        <div>
+                            <!-- Col 3-->
+                            <div class="dropdown-center">
+                                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    style="width: 520px; height: 50px; border-bottom: 2px solid black;">
+                                    How do I find the best price on plane tickets?
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" disabled style="background-color:antiquewhite;">
+                                            Choose your destination and preferred travel dates, and we’ll provide you
+                                            with<br>
+                                            an overview of the cheapest, quickest, and best flights so you can compare<br>
+                                            prices and book flights with confidence.<br>
+
+                                            Flexible on dates? It’s even easier to find cheap flights by using our Price<br>
+                                            Calendar (found above your search results), which shows you the cheapest
+                                            travel<br>
+                                            dates. This is available on all of our most popular flight routes.</a></li>
+                                </ul>
+
+                            </div>
+                            <!-- Col 4-->
+                            <div class="dropdown-center">
+                                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    style="width: 520px; height: 50px; border-bottom: 2px solid black;">
+                                    How do I make sure I don’t miss a flight deal?
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" disabled style="background-color:antiquewhite;">
+                                            Sign up for Price Alerts on your favourite flight routes and automatically<br>
+                                            get live price updates, so you can book flights when the price is right. You<br>
+                                            can do so next to your flight search results or in the profile menu. If<br>
+                                            you're on our app, you will find Price Alerts in the navigation menu.<br>
+
+                                            You can also subscribe to special offers and limited-time flight deals from<br>
+                                            our partners. Just sign in, go to Notifications in your profile and<br>
+                                            subscribe to the topics you’re interested in.</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    
+    </div>
+    </div>
+
+    <!-- Footer -->
+        <div class="container " style="margin-top: 40px;">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center ">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item"><a href="about/about.html" class="nav-link px-2 text-body-secondary">About</a></li>
+                </ul>
+                <hr class="border border-dark border-2 opacity-100" style="margin-top: 2px;">
+
+                <p class="text-center text-body-secondary">© 2023 Company, Inc</p>
+            </footer>
+        </div>
+
+
+
+        <!-- International / Domestic js -->
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links")
+            var tabcontents = document.getElementsByClassName("tab-contents")
+            function opentab(tabname){
+              for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+              }
+              for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+              }
+              event.currentTarget.classList.add("active-link");
+              document.getElementById(tabname).classList.add("active-tab")
+            }
+          </script>
+
+        <!-- Side Menu  -->
+          <script>
+            window.addEventListener('DOMContentLoaded', event => {
+            // Toggle the side navigation
+            const sidebarToggle = document.body.querySelector('#sidebarToggle');
+            if (sidebarToggle) {
+                sidebarToggle.addEventListener('click', event => {
+                    event.preventDefault();
+                    document.body.classList.toggle('sb-sidenav-toggled');
+                    localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+                });
+            }
+
+            });
+          </script>
+
+
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+</body>
+
+</html>

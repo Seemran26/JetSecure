@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>DotSky</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/filght.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script defer="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+       .trips{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 80px;
+
+       }
+    </style>
+
+</head>
+
+<body class="sb-nav-fixed">
+    <!-- Sidebar-->
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html">DotSky</a>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+            </div>
+        </form>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login into Flight Account</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="login.php" method="post">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" aria-describedby="emailHelp" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                        </div>
+                        <div class="form-group">
+                            <div class="small"><a href="#signupModal" data-bs-toggle="modal"
+                                    data-bs-target="#signupModal">Need an account? Sign up!</a></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Get an Flight Account</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="register.php" method="post">
+                        <div class="form-group">
+                            <label for="username">Name</label>
+                            <input type="name" class="form-control" aria-describedby="emailHelp" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" aria-describedby="emailHelp" name="email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="conpassword">Confirm Password</label>
+                            <input type="password" class="form-control" name="conpassword">
+                        </div>
+                        <div class="form-group">
+                            <div class="small"><a href="#loginModal" data-bs-toggle="modal"
+                                    data-bs-target="#loginModal">Have an account? Go to login</a></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" value="Register">Create Account</button>
+                    </form>
+                 </div>
+                <div class="modal-footer">
+                    <form action="./about/veiw.php" method="post">
+                        <button type="submit" class="btn btn-secondary">View Data</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Carousel Modal -->
+        <div>
+            <div id="layoutSidenav_content">
+                <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./Images/trips.jpg" class="d-block w-100 h-80" alt="..." style="filter: blur(5px); ">
+                            <div class="carousel-caption d-none d-md-block" id="trips">
+                                <h2 style="height: 100px; width: 400px; font-weight: bolder;" >An easier way to manage your trips.</h2>
+                                <p style="height: 80px; width: 400px;"> We make it super easy to schedule, organise and travel with friends or family. Trips
+                                    is free – and available to use no matter where you book.</p> 
+                                    <div style="height: 280px; width: 400px;">
+                                       <button class="btn btn-danger" style="height: 60px; margin-right: 10px;"><a href="index.html" style=" text-decoration: none; color: white ;">Sign in to plan better</a> </button>
+                                     <button class="btn btn-light" style="height: 60px; "> <a href="index.html" style=" text-decoration: none; color: rgb(0, 0, 0) ;">Find my Booking </a> </button> 
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+
+
+
+            <div id="layoutSidenav_content" style="margin-top: 40px;">
+                
+                <div class="container marketing">
+                    <h2>Trips keeps all your plans in one place for a stress-free adventure.</h2>
+
+                    <!-- START THE FEATURETTES -->
+
+                    <hr class="border border-dark border-2 opacity-100">
+                    <br>
+
+                    <div class="row featurette">
+                        <div class="col-md-7">
+                            <h2 class="featurette-heading fw-normal lh-1">Plan your trip</h2>
+                            <p class="lead">Trips lets you plan, build and manage your perfect itinerary for adventures
+                                of any length, in any location.</p>
+                            <p><a class="link-opacity-50-hover" href="#">Start planning</a></p>
+                        </div>
+                        <div class="col-md-5">
+                            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                                width="500" height="500" src="./Images/trips1.jpg" style="border-radius: 15px;">
+                        </div>
+                    </div>
+                    <br>
+                    <hr class="border border-dark border-2 opacity-100">
+                    <br>
+                    <div class="row featurette">
+                        <div class="col-md-7 order-md-2">
+                            <h2 class="featurette-heading fw-normal lh-1">Stay informed about unexpected changes</h2>
+                            <p class="lead">Trips keeps all your bookings in one place with real-time updates on any
+                                cancellations, delays or gate changes that may arise.</p>
+                            <p><a class="link-opacity-50-hover" href="#">Add your bookings automatically</a></p>
+                        </div>
+                        <div class="col-md-5 order-md-1">
+                            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                                width="500" height="500" src="./Images/trips2.jpg" style="border-radius: 15px;">
+                        </div>
+                    </div>
+                    <br>
+                    <hr class="border border-dark border-2 opacity-100">
+                    <br>
+                    <div class="row featurette">
+                        <div class="col-md-7">
+                            <h2 class="featurette-heading fw-normal lh-1">Collaborate together</h2>
+                            <p class="lead">Keep everyone on your trip on the same page with shared itineraries and
+                                editing permissions.</p>
+                            <p><a class="link-opacity-50-hover" href="#">Start collaborating</a></p>
+                        </div>
+                        <div class="col-md-5">
+                            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                                width="500" height="500" src="./Images/trips3.jpg" style="border-radius: 15px;">
+                        </div>
+                    </div>
+
+                    <hr class="featurette-divider">
+
+                    <!-- /END THE FEATURETTES -->
+                    <div class="container " style="margin-top: 40px;">
+                        <footer class="py-3 my-4">
+                          <ul class="nav justify-content-center ">
+                            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                            <li class="nav-item"><a href="./about/about.html" class="nav-link px-2 text-body-secondary">About</a></li>
+                          </ul><hr class="border border-dark border-2 opacity-100" style="margin-top: 2px;">
+                          
+                          <p class="text-center text-body-secondary">© 2023 Company, Inc</p>
+                        </footer>
+                      </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+</body>
+
+</html>
